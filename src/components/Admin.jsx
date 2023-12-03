@@ -89,7 +89,6 @@ const Admin = () => {
   const handleSaveEdit = (id) => {
     setEditingRow(null);
 
-    // Update the user with the edited values
     const updatedUsers = users.map(user =>
       user.id === id ? { ...user, ...editedValues } : user
     );
@@ -99,7 +98,6 @@ const Admin = () => {
   };
 
   const handleInputChange = (field, value) => {
-    // Update the edited values when input changes
     setEditedValues(prevValues => ({
       ...prevValues,
       [field]: value,
